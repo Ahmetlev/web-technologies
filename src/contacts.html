@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+
+<header class="header">
+    <img class="header__logo" src="assets/img/logo.jpg" alt="Логотип" width="150">
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li><a class="nav__link" href="index.html">Главная</a></li>
+            <li><a class="nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+            <span class="breadcrumbs__current">Контакты</span>
+        </li>
+    </ul>
+</nav>
+
+<main class="main">
+    <h2 class="title-h2">Контакты</h2>
+
+    <p class="text">Напишите нам.</p>
+
+    <img src="assets/img/logo.jpg" alt="Наше изображение" width="300">
+
+    <h4 class="title-h4">Адрес</h4>
+    <p class="text">Тюмень</p>
+
+    <h4 class="title-h4">Телефон</h4>
+    <ul>
+        <li class="text">+7 999 999 99 99</li>
+    </ul>
+
+    <h4 class="title-h4">Онлайн сервисы</h4>
+    <ul>
+        <li><a class="footer__link" href="https://example.com">Наш сайт</a></li>
+        <li><a class="footer__link" href="mailto:example@mail.com">Наша почта</a></li>
+    </ul>
+
+    <p class="text">Адрес: Тюмень, номер: +7 999 999 99 99</p>
+
+    <h4 class="title-h4">Отправить сообщение</h4>
+
+    <form class="form">
+        <label class="form__label" for="name">Полное имя</label>
+        <input class="form__input" type="text" id="name" name="name" placeholder="Введите имя">
+
+        <br><br>
+
+        <label class="form__label" for="email">Email</label>
+        <input class="form__input" type="email" id="email" name="email" placeholder="Введите email">
+
+        <br><br>
+
+        <label class="form__label" for="message">Сообщение</label>
+        <textarea class="form__input" id="message" name="message" rows="5" placeholder="Введите сообщение"></textarea>
+
+        <br><br>
+
+        <button class="form__button" type="submit">Отправить</button>
+    </form>
+</main>
+
+<footer class="footer">
+    <h3 class="title-h3">Контакты</h3>
+
+    <p class="text">Свяжитесь с нами.</p>
+
+    <hr class="divider">
+
+    <ul class="footer__list">
+        <li class="footer__item">Будем рады общению</li>
+        <li class="footer__item">+7 999 999 99 99</li>
+        <li class="footer__item">example@mail.com</li>
+    </ul>
+
+    <p class="text">Все права защищены</p>
+</footer>
+
+</body>
+</html>

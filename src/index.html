@@ -1,17 +1,68 @@
-<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
-<div class="test" style="color: blue">
-    test
-</div>
+
+<header class="header">
+    <img class="header__logo" src="assets/img/logo.jpg" alt="Логотип" width="150">
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li><a class="nav__link" href="index.html">Главная</a></li>
+            <li><a class="nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+            <span class="breadcrumbs__current">О проекте</span>
+        </li>
+    </ul>
+</nav>
+
+<main class="main">
+    <h1 class="title-h1">Наш сайт</h1>
+
+    <p class="text">Добро пожаловать на наш небольшой сайт.</p>
+
+    <h3 class="title-h3">О проекте</h3>
+
+    <h4 class="title-h4">Простые технологии</h4>
+
+    <p class="text">Мы изучаем HTML и создаём первые веб-страницы своими руками.</p>
+
+    <h3 class="title-h3">Наши цели</h3>
+
+    <p class="text">Получить практические навыки веб-разработки.</p>
+
+    <hr class="divider">
+</main>
+
+<footer class="footer">
+    <h3 class="title-h3">Контакты</h3>
+
+    <p class="text">Свяжитесь с нами.</p>
+
+    <hr class="divider">
+
+    <ul class="footer__list">
+        <li class="footer__item">Будем рады общению</li>
+        <li class="footer__item">+49 123 456789</li>
+        <li class="footer__item">example@mail.com</li>
+    </ul>
+
+    <p class="text">Все права защищены</p>
+</footer>
 
 <script src="index.js"></script>
 </body>

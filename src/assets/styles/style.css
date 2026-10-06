@@ -1,11 +1,237 @@
-@import "./global.css";
-@import "./fonts.css";
-@import "./utils.css";
+/* src/assets/styles/style.css */
 
-.test {
-    color: yellow !important;
+/* Подключаем шрифты */
+@import url('fonts.css');
+@import url('global.css');
+
+/* ===== Базовые стили ===== */
+* {
+    box-sizing: border-box;
 }
 
-.test {
-    color: red !important;
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1F3F68;
+}
+
+/* ===== Шапка сайта ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header__logo {
+    display: block;
+}
+
+/* Меню */
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #1F3F68;
+    font-size: 16px;
+    line-height: 26px;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: #5A98D0;
+}
+
+/* Хлебные крошки */
+.breadcrumbs {
+    padding: 20px 40px 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1F3F68;
+}
+
+.breadcrumbs__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs__item + .breadcrumbs__item::before {
+    content: '/';
+    margin-right: 8px;
+    color: #5A98D0;
+}
+
+.breadcrumbs__link {
+    color: #5A98D0;
+    text-decoration: none;
+}
+
+.breadcrumbs__link:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs__current {
+    color: #1F3F68;
+    opacity: 0.6;
+}
+
+/* ===== Типографика ===== */
+
+/* Все параграфы */
+.text {
+    font-size: 16px;
+    line-height: 26px;
+    color: #1F3F68;
+}
+
+/* Заголовок h1 */
+.title-h1 {
+    font-size: 64px;
+    color: #1F3F68;
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+
+/* Заголовок h2 (страница Контакты) */
+.title-h2 {
+    font-weight: 500;
+    font-size: 44px;
+    text-align: center;
+    color: #1F3F68;
+    margin: 0 0 20px;
+}
+
+/* Заголовки h3 */
+.title-h3 {
+    font-size: 36px;
+    text-align: center;
+    color: #1F3F68;
+    margin: 30px 0 15px;
+}
+
+/* Заголовки h4 */
+.title-h4 {
+    font-size: 20px;
+    line-height: 30px;
+    color: #1F3F68;
+    margin: 20px 0 10px;
+}
+
+/* ===== Основной контент ===== */
+.main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Разделитель */
+.divider {
+    border: none;
+    border-top: 1px solid #E0E0E0;
+    margin: 30px 0;
+}
+
+/* ===== Форма ===== */
+.form {
+    background-image: url('../img/form-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Общий класс для всех полей ввода */
+.form__input {
+    border: 1px solid #356EAD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    opacity: 0.4;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #1F3F68;
+    background: #FFFFFF;
+    margin-top: 8px;
+}
+
+.form__input:focus {
+    opacity: 0.9;
+    outline: none;
+}
+
+/* Кнопка отправки формы */
+.form__button {
+    background: #5A98D0;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    border: none;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form__button:hover {
+    background: #3E7CB8;
+    transform: translateY(-2px);
+}
+
+/* Лейблы формы */
+.form__label {
+    display: block;
+    font-size: 16px;
+    line-height: 26px;
+    color: #1F3F68;
+}
+
+/* ===== Подвал ===== */
+.footer {
+    background: #F5F5F5;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__item {
+    font-size: 16px;
+    line-height: 26px;
+    color: #1F3F68;
+    margin-bottom: 8px;
+}
+
+.footer__link {
+    color: #5A98D0;
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
 }
