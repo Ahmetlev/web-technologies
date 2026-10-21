@@ -1,10 +1,10 @@
-/* src/assets/styles/style.css */
+
 
 /* Подключаем шрифты */
 @import url('fonts.css');
 @import url('global.css');
 
-/* ===== Базовые стили ===== */
+
 * {
     box-sizing: border-box;
 }
@@ -16,7 +16,7 @@ body {
     color: #1F3F68;
 }
 
-/* ===== Шапка сайта ===== */
+
 .header {
     display: flex;
     align-items: center;
@@ -54,41 +54,58 @@ body {
 /* Хлебные крошки */
 .breadcrumbs {
     padding: 20px 40px 0;
-    font-size: 14px;
-    line-height: 22px;
-    color: #1F3F68;
 }
 
 .breadcrumbs__list {
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    display: inline-flex;                 /* ширина по содержимому */
     margin: 0;
     padding: 0;
+    background: linear-gradient(180deg, #F0F4F5 0%, #7FB5BC 100%);
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
 }
 
+.breadcrumbs__item {
+    position: relative;
+    padding: 12px 30px;
+}
+
+/* Разделитель-«стрелка» между элементами (кроме первого) */
 .breadcrumbs__item + .breadcrumbs__item::before {
-    content: '/';
-    margin-right: 8px;
-    color: #5A98D0;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -10%;
+    width: 1px;
+    height: 120%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.25), rgba(255,255,255,0.9));
+    border-radius: 50%;
+    transform: skewX(-10deg);
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.15);
 }
 
 .breadcrumbs__link {
-    color: #5A98D0;
+    color: #000000;
     text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    transition: opacity 0.2s ease;
 }
 
 .breadcrumbs__link:hover {
-    text-decoration: underline;
+    opacity: 0.65;
 }
 
 .breadcrumbs__current {
-    color: #1F3F68;
-    opacity: 0.6;
+    color: #000000;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
 }
 
-/* ===== Типографика ===== */
+/*  Типографика  */
 
 /* Все параграфы */
 .text {
@@ -105,7 +122,7 @@ body {
     margin: 0 0 20px;
 }
 
-/* Заголовок h2 (страница Контакты) */
+/* Заголовок h2  */
 .title-h2 {
     font-weight: 500;
     font-size: 44px;
@@ -130,7 +147,7 @@ body {
     margin: 20px 0 10px;
 }
 
-/* ===== Основной контент ===== */
+/*  Основной контент  */
 .main {
     padding: 40px;
     max-width: 1200px;
@@ -144,7 +161,7 @@ body {
     margin: 30px 0;
 }
 
-/* ===== Форма ===== */
+/*  Форма  */
 .form {
     background-image: url('../img/form-bg.jpg');
     background-size: cover;
@@ -179,7 +196,7 @@ body {
 
 /* Кнопка отправки формы */
 .form__button {
-    background: #5A98D0;
+    background: linear-gradient(135deg, #4A90E2 0%, #9B51E0 100%);
     box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
     font-weight: 500;
@@ -191,11 +208,12 @@ body {
     border: none;
     padding: 15px 40px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: filter 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
 }
 
 .form__button:hover {
-    background: #3E7CB8;
+    filter: brightness(1.1);
     transform: translateY(-2px);
 }
 
@@ -207,7 +225,7 @@ body {
     color: #1F3F68;
 }
 
-/* ===== Подвал ===== */
+/* Подвал */
 .footer {
     background: #F5F5F5;
     padding: 40px;
@@ -234,4 +252,82 @@ body {
 
 .footer__link:hover {
     text-decoration: underline;
+}
+
+
+/* СТИЛИ ДЛЯ СТРАНИЦЫ ПРОЕКТОВ  */
+/* Общая секция */
+.project-block {
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+}
+
+/* Заголовки внутри секций */
+.project-block h2 {
+    color: #1F3F68;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Формы  */
+.simple-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin-top: 15px;
+}
+
+.simple-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.simple-form button {
+    padding: 10px;
+    background: #5A98D0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Списки */
+.simple-list {
+    list-style: none;
+    padding: 0;
+}
+
+.simple-list li {
+    margin-bottom: 10px;
+    color: #1F3F68;
+}
+
+/* Карточка проекта */
+.project-item {
+    border: 2px dashed #5A98D0;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Блоки с цветным фоном  */
+.blue-block {
+    background: #1F3F68;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.blue-block h2, .blue-block p {
+    color: white;
+}
+
+/* FAQ */
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
 }
