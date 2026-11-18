@@ -1,0 +1,811 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #F4F6F9;
+  color: #101828;
+  line-height: 1.5;
+  overflow-x: hidden;
+  padding-top: 96px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1224px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/*  
+   1. DESKTOP BASE (1280px – 1440px – 1920px+)
+     */
+.header {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 1176px;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0 24px;
+  position: relative;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 18px;
+  color: #2563EB;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #101828;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.nav a:hover {
+  color: #2563EB;
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 14px;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #2563EB;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.burger-menu span {
+  display: block;
+  width: 100%;
+  height: 3.5px;
+  background-color: #2563EB;
+  border-radius: 2px;
+}
+
+.hero {
+  position: relative;
+  padding: 40px 0 90px;
+  overflow: visible;
+}
+
+.hero-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-content {
+  flex: 0 0 640px;
+  max-width: 640px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #101828;
+}
+
+.hero-content h1 span {
+  color: #2563EB;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: #344054;
+  margin-bottom: 44px;
+  max-width: 560px;
+  line-height: 1.5;
+}
+
+.contact-form-card {
+  background: #FFFFFF;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.16), 0 0 2px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 640px;
+}
+
+.contact-form-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #101828;
+  line-height: 1.35;
+  max-width: 440px;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  color: #667085;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid #D0D5DD;
+  font-size: 14px;
+  font-weight: 500;
+  color: #101828;
+  outline: none;
+  background: transparent;
+}
+
+.form-group input:focus {
+  border-bottom-color: #2563EB;
+}
+
+.input-with-flag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #D0D5DD;
+}
+
+.input-with-flag input {
+  border-bottom: none;
+}
+
+.flag-icon {
+  flex-shrink: 0;
+}
+
+.btn {
+  background-color: #2563EB;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #1D4ED8;
+}
+
+.hero-visual {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 540px;
+}
+
+.phone-card-desktop {
+  display: block;
+  position: absolute;
+  right: -30px;
+  width: 640px;
+  height: auto;
+  filter: drop-shadow(0 16px 36px rgba(16, 24, 40, 0.15));
+  z-index: 1;
+}
+
+.phone-card-mobile {
+  display: none;
+}
+
+.development-cycle {
+  background-color: #FFFFFF;
+  padding: 80px 0;
+  position: relative;
+  z-index: 3;
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #101828;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #475467;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.tech-stack-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.tech-column h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #101828;
+}
+
+.tech-column p {
+  font-size: 15px;
+  color: #475467;
+  line-height: 1.6;
+}
+
+.links-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Чтобы ширина ссылки подстраивалась под длину текста */
+  gap: 20px;
+}
+
+.links-column a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px; /* Фиксированное расстояние от текста до стрелки, как в макете */
+  text-decoration: none;
+  color: #101828;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 4px 0;
+  border-bottom: 1.5px solid transparent; /* Прозрачная линия, чтобы текст не прыгал при клике */
+  transition: color 0.2s, border-color 0.2s;
+}
+
+
+.links-column a.active,
+.links-column a:hover {
+  font-weight: 700;
+  color: #101828;
+  border-bottom-color: #2563EB;
+}
+
+.links-column a span {
+  color: #2563EB;
+  font-weight: 600;
+}
+
+.footer {
+  padding: 24px 24px 32px;
+  background-color: #FFFFFF;
+}
+
+.footer-card {
+  background-color: #101828;
+  color: #FFFFFF;
+  border-radius: 12px;
+  max-width: 1176px;
+  margin: 0 auto;
+  padding: 24px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.footer-card h2 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 36px;
+}
+
+.footer-col-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.footer-icon {
+  color: #98A2B3;
+  flex-shrink: 0;
+}
+
+.footer-col span {
+  font-size: 13px;
+  color: #98A2B3;
+}
+
+.footer-col p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #D0D5DD;
+  text-align: center;
+}
+
+/*  
+   2. SMALL LAPTOPS & LANDSCAPE TABLETS (993px – 1279px / 1024px)
+     */
+@media (max-width: 1279px) {
+  .nav {
+    gap: 18px;
+  }
+
+  .header-contacts {
+    gap: 16px;
+  }
+
+  .hero-content {
+    flex: 0 0 540px;
+    max-width: 540px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .contact-form-card {
+    max-width: 540px;
+  }
+
+  .phone-card-desktop {
+    width: 490px;
+    right: -20px;
+  }
+
+  .tech-grid {
+    gap: 48px;
+  }
+}
+
+/*  
+   3. TABLETS & INTERMEDIATE (641px – 992px / классика 768px)
+     */
+@media (max-width: 992px) {
+  body {
+    padding-top: 122px;
+  }
+
+  .container {
+    padding: 0 32px;
+  }
+
+  /* Шапка планшета */
+  .header {
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 960px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+  }
+
+  .header-container {
+    height: 90px;
+    padding: 0 28px;
+  }
+
+  .nav,
+  .phone-link {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+    width: 40px;
+    height: 30px;
+  }
+
+  .burger-menu span {
+    height: 4.5px;
+    border-radius: 3px;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+  }
+
+  .email-link {
+    font-size: 16px;
+  }
+
+  /* Первый экран и форма */
+  .hero {
+    padding: 28px 0 48px;
+    overflow: visible;
+  }
+
+  .hero-container {
+    display: block;
+    position: relative;
+    min-height: auto;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 390px;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    line-height: 1.22;
+    margin-bottom: 18px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    line-height: 1.45;
+    margin-bottom: 36px;
+  }
+
+  .contact-form-card {
+    width: 382px;
+    max-width: 100%;
+    padding: 32px;
+    border-radius: 12px;
+  }
+
+  .contact-form-card h3 {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .btn {
+    width: auto;
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+
+  /* Мокапы телефонов на планшете */
+  .hero-visual {
+    position: static;
+    min-height: 0;
+  }
+
+  .phone-card-desktop {
+    display: none;
+  }
+
+  .phone-card-mobile {
+    display: block;
+    position: absolute;
+    left: 325px;
+    top: -195px;
+    width: 415px;
+    max-width: none;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Второй экран */
+  .development-cycle {
+    padding: 56px 0 64px;
+    position: relative;
+    z-index: 3;
+    background-color: #FFFFFF;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-header h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .tech-stack-wrapper {
+    gap: 28px;
+  }
+
+  .tech-column h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .tech-column p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .links-column {
+    gap: 14px;
+  }
+
+  .links-column a {
+    max-width: 100%;
+    font-size: 15px;
+    padding: 4px 0;
+  }
+
+  /* Подвал сайта (Footer на планшете) */
+  .footer {
+    padding: 16px 32px 24px;
+    background-color: #FFFFFF;
+  }
+
+  .footer-card {
+    padding: 28px 24px;
+    border-radius: 12px;
+  }
+
+  .footer-card h2 {
+    font-size: 20px;
+    margin-bottom: 28px;
+}
+.footer-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+}
+.footer-col span {
+    font-size: 12px;
+}
+.footer-col p {
+    font-size: 13px;
+    word-break: break-word;
+}
+.footer-bottom {
+    padding-top: 0;
+    border-top: none;
+    font-size: 12px;
+}
+}
+/*  
+4. TABLETS  (481px – 640px)
+  */
+@media (max-width: 640px) {
+body {
+    padding-top: 84px;
+}
+.container {
+    padding: 0 16px;
+}
+.header {
+    top: 12px;
+    width: calc(100% - 24px);
+}
+.header-container {
+    height: 60px;
+    padding: 0 16px;
+}
+.burger-menu {
+    width: 26px;
+    height: 18px;
+}
+.burger-menu span {
+    height: 3px;
+}
+.logo {
+    font-size: 16px;
+}
+.email-link {
+    font-size: 0;
+    gap: 0;
+}
+.email-link svg,
+.email-link img {
+    width: 22px;
+    height: 22px;
+}
+.hero {
+    padding: 24px 0 40px;
+    overflow: hidden;
+}
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    gap: 24px;
+}
+.hero-content {
+    width: 100%;
+}
+.hero-content h1 {
+    font-size: 26px;
+}
+.hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+.contact-form-card {
+    width: 100%;
+    padding: 24px 20px;
+}
+.btn {
+    width: 100%;
+}
+.hero-visual {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.phone-card-mobile {
+    position: static;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+}
+.tech-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+.footer {
+    padding: 16px;
+}
+.footer-info {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.footer-card {
+    padding: 28px 20px;
+}
+}
+/*  
+5.  STANDARD SMARTPHONES (320px – 480px)
+  */
+@media (max-width: 480px) {
+.container {
+    padding: 0 12px;
+}
+.header {
+    width: calc(100% - 16px);
+}
+.header-container {
+    height: 54px;
+    padding: 0 12px;
+}
+.logo {
+    font-size: 15px;
+}
+.hero-content h1 {
+    font-size: 22px;
+    line-height: 1.25;
+}
+.hero-subtitle {
+    font-size: 13px;
+}
+.contact-form-card {
+    padding: 20px 16px;
+}
+.contact-form-card h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.phone-card-mobile {
+    max-width: 290px;
+}
+.section-header h2 {
+    font-size: 22px;
+}
+.tech-column h3 {
+    font-size: 17px;
+}
+.tech-column p {
+    font-size: 13px;
+}
+.footer {
+    padding: 12px;
+}
+.footer-card {
+    padding: 24px 16px;
+}
+.footer-card h2 {
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+}
